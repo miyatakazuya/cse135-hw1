@@ -1,109 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
 
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/projects.css">
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
 
-  </head>
-
-  <body>
-    <header id="header">
-      <h1>Projects</h1>
-      <a href="../index.html"><button class="main_button">Home</button></a>
-      <a href="aboutme.html"><button class="main_button">About Me</button></a>
-      <a href="projects.html"><button class="main_button" selected="true">Project</button></a>
-      <a href="contact.html"><button class="main_button">Contact</button></a>
-
-      <label class="switch">
-        <input type="checkbox" id="toggleTheme" onclick="toggleTheme()"></input>
-        <span class="slider round"></span>
-      </label>
-
-    </header>
-
-    <hr>
-    
-    <my-project>
-      <h2>Project 1: TritonUAS</h2>
-
-      <section>
-
-        <picture>
-          <source srcset="../images/toothless.jpg" media="(min-width: 800px)" type="image/jpg">
-          <img
-            src="../images/toothless_small.png"
-            width="1000"
-            alt="Kazuya Miyata Portrait"
-          >
-        </picture>
-  
-        <p>
-          As a software lead for Triton UAS, I designed and programmed autonomous flight systems.
-  
-          The pipeline takes in a <code>BBox[][]</code> and <code>cv Mat[]</code> 
-          which represents the image and telemtry of the plane. The program then converts the BBox into image-based coordinates,
-          performing transformations that allow the coordinate of the object to be calculated. 
-        </p>
-      </section>    
-    </my-project>
-    
-    <my-project>
-      <h2>Project 2: Istari UAV</h2>
-
-      <section>
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/projects.css">
 
 
-        <picture>
-          <source srcset="../images/istari.jpg" media="(min-width: 800px)" type="image/jpg" width="1000">
-          <img
-            src="../images/istari.jpg"
-            width="1000"
-            alt="Kazuya Miyata Portrait"
-          >
-        </picture>
-  
-        <p>
-          Fabricated an ultra-lightweight UAV with a BU professor as a research intern.
-          Experimented with 5+ PLA variants, measuring elasticity and tensile strength 
-          using MATLAB and NumPy to evaluate and model their aerial performance and cost 
-          curve in Pandas. Authored a company research paper on the performance of low-cost 
-          PLA models, presenting to company executives enabling the creation of prototypes of the 
-          company’s aerospace models at up to 68% lower cost
-        </p>
-      </section>
-      
-    </my-project>
+</head>
 
-    <my-project>
-      More projects coming soon!
-    </my-project>
+<body>
+  <header id="header">
+    <h1>Projects</h1>
+    <a href="../index.html" class="main_button">Home</a>
+    <a href="aboutme.html" class="main_button">About Me</a>
+    <a href="projects.html" class="main_button active">Project</a>
+    <a href="contact.html" class="main_button">Contact</a>
 
-    <footer>    
-      <nav>
-        <a href="https://www.linkedin.com/in/kazmiyata/">
-          <img src="/media/icons8-linkedin.svg" alt="Linkedin" width="40" height="40">
-        </a>
+    <label class="switch">
+      <input type="checkbox" id="toggleTheme" onclick="toggleTheme()">
+      <span class="slider round"></span>
+    </label>
 
-         <a href="https://github.com/miyatakazuya">
-          <img src="/media/icons8-github.svg" alt="Github" width="40" height="40">
-         </a>
+  </header>
 
-         <a href="mailto:kazuyamiyata18@gmail.com">
-          <img src="/media/Minduka-mail.svg" alt="Linkedin" width="40" height="40">
-         </a>
-      </nav>
-    </footer>
+  <hr>
 
-    <script src="../scripts/theme.js"></script>
+  <my-project>
+    <h2>Project 1: TritonUAS</h2>
 
-    <script>
-      document.getElementsByClassName("slider")[0].style.display = "block";
-    </script>
-  </body>
+    <section>
+
+      <picture>
+        <source srcset="../images/toothless.jpg" media="(min-width: 800px)" type="image/jpg">
+        <img src="../images/toothless_small.png" width="1000" alt="Kazuya Miyata Portrait">
+      </picture>
+
+      <p>
+        As a software lead for Triton UAS, I designed and programmed autonomous flight systems.
+
+        The pipeline takes in a <code>BBox[][]</code> and <code>cv Mat[]</code>
+        which represents the image and telemtry of the plane. The program then converts the BBox into image-based
+        coordinates,
+        performing transformations that allow the coordinate of the object to be calculated.
+      </p>
+    </section>
+  </my-project>
+
+  <my-project>
+    <h2>Project 2: Istari UAV</h2>
+
+    <section>
+
+
+      <picture>
+        <source srcset="../images/istari.jpg" media="(min-width: 800px)" type="image/jpg" width="1000">
+        <img src="../images/istari.jpg" width="1000" alt="Kazuya Miyata Portrait">
+      </picture>
+
+      <p>
+        Fabricated an ultra-lightweight UAV with a BU professor as a research intern.
+        Experimented with 5+ PLA variants, measuring elasticity and tensile strength
+        using MATLAB and NumPy to evaluate and model their aerial performance and cost
+        curve in Pandas. Authored a company research paper on the performance of low-cost
+        PLA models, presenting to company executives enabling the creation of prototypes of the
+        company’s aerospace models at up to 68% lower cost
+      </p>
+    </section>
+
+  </my-project>
+
+  <my-project>
+    More projects coming soon!
+  </my-project>
+
+  <footer>
+    <nav>
+      <a href="https://www.linkedin.com/in/kazmiyata/">
+        <img src="/media/icons8-linkedin.svg" alt="Linkedin" width="40" height="40">
+      </a>
+
+      <a href="https://github.com/miyatakazuya">
+        <img src="/media/icons8-github.svg" alt="Github" width="40" height="40">
+      </a>
+
+      <a href="mailto:kazuyamiyata18@gmail.com">
+        <img src="/media/Minduka-mail.svg" alt="Linkedin" width="40" height="40">
+      </a>
+    </nav>
+  </footer>
+
+  <script src="../scripts/theme.js"></script>
+
+  <script>
+    document.getElementsByClassName("slider")[0].style.display = "block";
+  </script>
+</body>
+
 </html>

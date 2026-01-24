@@ -12,13 +12,13 @@
   <body>
     <header id="header">
       <h1>About Me</h1>
-      <a href="../index.html"><button class="main_button">Home</button></a>
-      <a href="aboutme.html"><button class="main_button" selected="true">About Me</button></a>
-      <a href="project-new.html"><button class="main_button">Project</button></a>
-      <a href="contact.html"><button class="main_button">Contact</button></a>
+      <a href="../index.html" class="main_button">Home</a>
+      <a href="aboutme.html" class="main_button active">About Me</a>
+      <a href="project-new.html" class="main_button">Project</a>
+      <a href="contact.html" class="main_button">Contact</a>
 
       <label class="switch">
-        <input type="checkbox" id="toggleTheme" onclick="toggleTheme()"></input>
+        <input type="checkbox" id="toggleTheme" onclick="toggleTheme()">
         <span class="slider round"></span>
       </label>
     </header>
@@ -26,9 +26,9 @@
     <hr>
 
     <content-body>
-      <h2>General</h2>
       
       <section class="profile">
+        <h2>General</h2>
         <picture>
           <source srcset="../images/kaz_portrait_updated.jpg" media="(min-width: 800px)" type="image/jpg">
           <img

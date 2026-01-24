@@ -71,6 +71,11 @@ footer nav {
     background-color: darkgray;
     transition: background-color 0.25s 100ms;
     color: black;
+    
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 
     /* transform: background-color 3s 500ms; */
     /* text-shadow: 1px 1px 1px #fff; */
@@ -87,7 +92,8 @@ footer nav {
     /* background-color: white; */
 }
 
-.main_button[selected="true"] {
+.main_button[selected="true"],
+.main_button.active {
     background-color: rgb(102, 99, 99);
 }
 
@@ -97,3 +103,4 @@ footer nav {
         font-size: 0.5rem;
     }
 }
+
