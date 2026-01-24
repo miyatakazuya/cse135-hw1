@@ -1,0 +1,69 @@
+/* * {
+    border: 1px solid red;
+  } */
+  
+my-project {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3rem;  
+    margin-right: 3rem;
+    margin-bottom: 3rem; 
+}
+
+my-project > h2 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+my-project > section {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 700px) {
+    my-project > section {
+      flex-direction: column; 
+      justify-content: space-between;
+      min-height: fit-content;
+    }
+  }
+
+
+my-project > section > picture {
+    min-width: 300px;
+    float: left;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    object-fit:fill;
+}
+
+@media (max-width: 700px) {
+  my-project > section > picture {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    min-width: 10vh;
+  }
+}
+
+my-project > section > p {
+    /* max-width: 500px; */
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+  my-project > section > p {
+    margin-left: 25px;
+    margin-right: 25px;
+      font-size: 1rem;
+      /* min-width: 100vh; */
+  }
+}

@@ -1,0 +1,55 @@
+form {
+    min-width: 60vw;
+    background-color: white;
+    margin-bottom: 3vh;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+form-field {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    margin-bottom: 0em;
+}
+
+form-field:has(> input:required) label::after, form-field:has(> textarea:required) label::after{
+    content: " *";
+    color: red;
+}
+
+  
+output {
+    margin-top: 1em;
+}
+
+#comments {
+    min-height: 10vh;
+    background-color: white;
+}
+
+#comments.bad_input, #name.bad_input{
+    background-color: rgba(255,0,0,0.2);
+}
+
+
+/* input:user-invalid{
+    background-color: rgba(255,0,0,0.2);
+}
+
+input:user-valid{
+    background-color: rgba(0,255,0,0.2);
+} */
+
+#error, #email, #name{
+    opacity: 1;
+}
+  
+#error.fade-out, #email.fade-out, #name.fade-out {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+  

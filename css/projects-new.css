@@ -1,0 +1,35 @@
+project-card {
+    display: flex;
+    flex-direction: row;
+
+    width: 70vw;
+    border: 1px solid black;
+    background: white;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 34px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+picture img {
+    border-radius: 34px;
+    max-height: 300px;
+    max-width: 400px;
+    width:auto;
+    margin-right: 1rem;
+}
+
+@media (max-width: 700px) {
+    project-card {
+      flex-direction: column; 
+      /* justify-content: space-between;
+      min-height: fit-content; */
+    }
+  }
+

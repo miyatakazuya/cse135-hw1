@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/projects-new.css">
+  </head>
+
+  <body>
+    <header id="header">
+      <h1>Projects</h1>
+      <a href="../index.html"><button class="main_button">Home</button></a>
+      <a href="aboutme.html"><button class="main_button">About Me</button></a>
+      <a href="project-new.html"><button class="main_button" selected="true">Project</button></a>
+      <a href="contact.html"><button class="main_button">Contact</button></a>
+
+      <label class="switch">
+        <input type="checkbox" id="toggleTheme" onclick="toggleTheme()"></input>
+        <span class="slider round"></span>
+      </label>
+
+    </header>
+
+    <hr>
+
+    <content-body>
+        <h2>My Projects</h2>
+        <div class="buttons">
+            <button class="main_button big" id="local" name="local">Load Local</button>
+            <button class="main_button big" id="remote" name="remote">Load Remote</button>
+        </div>
+       
+        <div id="parent">
+            <!-- Harcoded Version of Markup: -->
+            <!-- <project-card data-header="Triton UAS" data-image-default="../images/toothless_small.png" data-image-alt="../images/istari.jpg">
+                <p class="description">As a software lead for Triton UAS, I designed and programmed autonomous flight systems.
+  
+                    The pipeline takes in a <code>BBox[][]</code> and <code>cv Mat[]</code> 
+                    which represents the image and telemtry of the plane. The program then converts the BBox into image-based coordinates,
+                    performing transformations that allow the coordinate of the object to be calculated. </p>
+            </project-card>
+            <project-card data-header="Istari UAV" data-hyperlink="https://twitter.com/home" data-image-default="../images/istari.jpg" data-image-alt="../images/istari.jpg">
+                <p class="description">Fabricated an ultra-lightweight UAV with a BU professor as a research intern.
+                    Experimented with 5+ PLA variants, measuring elasticity and tensile strength 
+                    using MATLAB and NumPy to evaluate and model their aerial performance and cost 
+                    curve in Pandas. </p>
+            </project-card> -->
+        </div>  
+    </content-body>
+
+
+
+
+    <footer-nav></footer-nav>
+
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/project-card.js "></script>
+    <script src="../scripts/footer.js"></script>
+    <script src="../scripts/dataloading.js "></script>
+
+    <script>
+      document.getElementsByClassName("slider")[0].style.display = "block";
+    </script>
+
+  </body>
+</html>
