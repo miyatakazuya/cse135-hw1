@@ -29,7 +29,7 @@
         </div>
     </noscript>
 
-    <form id="echoForm" action="/pages/perl/perl-general-echo.pl" method="POST">
+    <form id="echoForm" action="/cgi-bin/perl-general-echo.pl" method="POST">
         <div class="form-group">
             <label for="language">Target Language (Endpoint)</label>
             <select id="language" name="language">
@@ -104,35 +104,40 @@
 
                 form.enctype = encoding;
 
+                // Update Action URL
+                // Pattern: 
+                // PHP: /pages/php/[file]
+                // CGI: /cgi-bin/[file]
+
                 let ext = '';
-                let dir = '';
                 let filePrefix = '';
+                let baseDir = '';
 
                 switch (lang) {
                     case 'perl':
-                        dir = 'perl';
+                        baseDir = '/cgi-bin';
                         ext = 'pl';
                         filePrefix = 'perl';
                         break;
                     case 'go':
-                        dir = 'go';
+                        baseDir = '/cgi-bin';
                         ext = 'cgi';
                         filePrefix = 'go';
                         break;
                     case 'cpp':
-                        dir = 'cpp';
+                        baseDir = '/cgi-bin';
                         ext = 'cgi';
                         filePrefix = 'cpp';
                         break;
                     case 'php':
-                        dir = 'php';
+                        baseDir = '/pages/php';
                         ext = 'php';
                         filePrefix = 'php';
                         break;
                 }
 
                 let echoFileName = `${filePrefix}-${type}-echo.${ext}`;
-                let actionUrl = `/pages/${dir}/${echoFileName}`;
+                let actionUrl = `${baseDir}/${echoFileName}`;
 
                 form.action = actionUrl;
 

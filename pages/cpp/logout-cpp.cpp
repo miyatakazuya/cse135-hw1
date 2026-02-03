@@ -7,7 +7,7 @@ int main() {
     }
     
     // Redirect back to main page without ID
-    cout << "Location: session-cpp.cgi\r\n\r\n";
+    cout << "Location: /cgi-bin/session-cpp.cgi\r\n\r\n";
     
     return 0;
 }

@@ -36,7 +36,7 @@ func main() {
             fmt.Fprintf(w, "<p><strong>Session ID:</strong> %s</p>", sessID)
             
             // Logout must be a FORM to pass the hidden ID
-            fmt.Fprintln(w, "<form action='logout-go.cgi' method='POST'>")
+            fmt.Fprintln(w, "<form action='/cgi-bin/logout-go.cgi' method='POST'>")
             fmt.Fprintf(w, "<input type='hidden' name='session_id' value='%s'>", sessID)
             fmt.Fprintln(w, "<button type='submit'>Click here to Log Out</button>")
             fmt.Fprintln(w, "</form>")
@@ -44,13 +44,12 @@ func main() {
             fmt.Fprintln(w, "<p><strong>Status:</strong> No Active Session</p>")
              fmt.Fprintln(w, "<p>No username set.</p>")
              
-             // Login Link... but technically prompt says "Hidden Form Fields" for state management.
-             // The link to login page is fine to be a GET link because we don't have state YET.
-             fmt.Fprintln(w, "<p><a href='login-go.cgi'>Click here to Log In</a></p>")
+             // Login Link
+             fmt.Fprintln(w, "<p><a href='/cgi-bin/login-go.cgi'>Click here to Log In</a></p>")
         }
         
         fmt.Fprintln(w, "</div><hr>")
-        fmt.Fprintln(w, "<p><a href='../../index.html'>Back to Home</a></p>")
+        fmt.Fprintln(w, "<p><a href='/index.html'>Back to Home</a></p>")
         fmt.Fprintln(w, "</body></html>")
         
     })); err != nil {

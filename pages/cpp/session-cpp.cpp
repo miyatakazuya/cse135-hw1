@@ -24,17 +24,17 @@ int main() {
         cout << "<p><strong>Username:</strong> " << username << "</p>";
         cout << "<p><strong>Session ID:</strong> " << sess_id << "</p>";
         // Pass ID to logout
-        cout << "<p><a href='logout-cpp.cgi?session_id=" << sess_id << "'>Click here to Log Out</a></p>";
+        cout << "<p><a href='/cgi-bin/logout-cpp.cgi?session_id=" << sess_id << "'>Click here to Log Out</a></p>";
     } else {
         cout << "<p><strong>Status:</strong> No Active Session</p>";
         cout << "<p>No username set.</p>";
         // If we have an ID but no data (expired), we might want to start fresh. 
         // For login, we don't need to pass an ID if we are starting fresh.
-        cout << "<p><a href='login-cpp.cgi'>Click here to Log In</a></p>";
+        cout << "<p><a href='/cgi-bin/login-cpp.cgi'>Click here to Log In</a></p>";
     }
     
     cout << "</div><hr>";
-    cout << "<p><a href='../../index.html'>Back to Home</a></p>";
+    cout << "<p><a href='/index.html'>Back to Home</a></p>";
     cout << "</body></html>";
     return 0;
 }

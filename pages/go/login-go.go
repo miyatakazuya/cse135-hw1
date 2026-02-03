@@ -24,7 +24,7 @@ func main() {
                 
                 w.Header().Set("Content-Type", "text/html")
                 w.WriteHeader(200)
-                fmt.Fprintln(w, "Login Successful. <form action='session-go.cgi' method='POST'>")
+                fmt.Fprintln(w, "Login Successful. <form action='/cgi-bin/session-go.cgi' method='POST'>")
                 fmt.Fprintf(w, "<input type='hidden' name='session_id' value='%s'>", newID)
                 fmt.Fprintln(w, "<button type='submit'>Click here to Continue to Session Page</button></form>")
                 // Auto submit script
@@ -38,11 +38,11 @@ func main() {
         
         fmt.Fprintln(w, "<!DOCTYPE html><html><head><title>Go Login</title></head><body>")
         fmt.Fprintln(w, "<h1>Set Username (Login)</h1>")
-        fmt.Fprintln(w, "<form method='POST' action='login-go.cgi'>")
+        fmt.Fprintln(w, "<form method='POST' action='/cgi-bin/login-go.cgi'>")
         fmt.Fprintln(w, "<label>Enter Username: <input type='text' name='username' required></label>")
         fmt.Fprintln(w, "<button type='submit'>Start Session</button>")
         fmt.Fprintln(w, "</form>")
-        fmt.Fprintln(w, "<p><a href='session-go.cgi'>Back to Session Page</a></p>")
+        fmt.Fprintln(w, "<p><a href='/cgi-bin/session-go.cgi'>Back to Session Page</a></p>")
         fmt.Fprintln(w, "</body></html>")
         
     })); err != nil {

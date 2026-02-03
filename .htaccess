@@ -8,3 +8,4 @@ Require valid-user
 </Files>
 
 ErrorDocument 404 /new404.html
+Options -ExecCGI
