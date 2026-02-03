@@ -130,3 +130,7 @@ Fast-forward
 To add an exception for this directory, call:
 
 	git config --global --add safe.directory /var/www/kazuyamiyata.site/public_html
+[2026-02-03 07:58:12] PULL RESULT: fatal: detected dubious ownership in repository at '/var/www/kazuyamiyata.site/public_html'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/kazuyamiyata.site/public_html

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Form Demo</title>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .noscript-warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/">Return to Home</a>
+    <h1>Echo Form Demo</h1>
+
+    <noscript>
+        <div class="noscript-warning">
+            <strong>JavaScript is disabled.</strong> The form below will default to Perl General Echo.
+        </div>
+    </noscript>
+
+    <form id="echoForm" action="/pages/perl/perl-general-echo.pl" method="POST">
+        <div class="form-group">
+            <label for="language">Target Language (Endpoint)</label>
+            <select id="language" name="language">
+                <option value="perl">Perl</option>
+                <option value="go">Go</option>
+                <option value="cpp">C++</option>
+                <option value="php">PHP</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="method">HTTP Method</label>
+            <select id="method" name="_method_selector">
+                <option value="GET">GET</option>
+                <option value="POST" selected>POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="echo_type">Echo Type</label>
+            <select id="echo_type">
+                <option value="general">General Echo</option>
+                <option value="get">GET Echo</option>
+                <option value="post">POST Echo</option>
+            </select>
+            <small>Helper to select which specific endpoint file to hit.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="encoding">Encoding</label>
+            <select id="encoding" name="encoding">
+                <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+                <option value="application/json">application/json</option>
+                <option value="multipart/form-data">multipart/form-data</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message" value="Hello World">
+        </div>
+
+        <div class="form-group">
+            <label for="extra_data">Extra Data</label>
+            <input type="text" id="extra_data" name="extra_data" value="Test Data">
+        </div>
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('echoForm');
+            const languageSelect = document.getElementById('language');
+            const methodSelect = document.getElementById('method');
+            const echoTypeSelect = document.getElementById('echo_type');
+            const encodingSelect = document.getElementById('encoding');
+
+            function updateForm() {
+                const lang = languageSelect.value;
+                const method = methodSelect.value;
+                const type = echoTypeSelect.value;
+                const encoding = encodingSelect.value;
+
+                if (method === 'GET') {
+                    form.method = 'GET';
+                } else {
+                    form.method = 'POST';
+                }
+
+                form.enctype = encoding;
+
+                let ext = '';
+                let dir = '';
+                let filePrefix = '';
+
+                switch (lang) {
+                    case 'perl':
+                        dir = 'perl';
+                        ext = 'pl';
+                        filePrefix = 'perl';
+                        break;
+                    case 'go':
+                        dir = 'go';
+                        ext = 'cgi';
+                        filePrefix = 'go';
+                        break;
+                    case 'cpp':
+                        dir = 'cpp';
+                        ext = 'cgi';
+                        filePrefix = 'cpp';
+                        break;
+                    case 'php':
+                        dir = 'php';
+                        ext = 'php';
+                        filePrefix = 'php';
+                        break;
+                }
+
+                let echoFileName = `${filePrefix}-${type}-echo.${ext}`;
+                let actionUrl = `/pages/${dir}/${echoFileName}`;
+
+                form.action = actionUrl;
+
+                console.log(`Updated form: action=${actionUrl}, method=${form.method}, enctype=${form.enctype}`);
+            }
+
+            languageSelect.addEventListener('change', updateForm);
+            methodSelect.addEventListener('change', updateForm);
+            echoTypeSelect.addEventListener('change', updateForm);
+            encodingSelect.addEventListener('change', updateForm);
+
+            updateForm();
+        });
+    </script>
+</body>
+
+</html>
