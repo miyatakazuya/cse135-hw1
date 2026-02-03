@@ -10,7 +10,7 @@ import (
 func main() {
     fmt.Println("Cache-Control: no-cache")
     fmt.Println("Content-type: text/html\n")
-    fmt.Println("<!DOCTYPE html><html><head><title>GET Request Echo</title></head><body><h1 align=\"center\">Get Request Echo</h1><hr>")
+    fmt.Println("<!DOCTYPE html><html><head><title>Go GET Request Echo</title></head><body><h1 align=\"center\">Go Get Request Echo</h1><hr>")
     
     query := os.Getenv("QUERY_STRING")
     fmt.Printf("<b>Query String:</b> %s<br />\n", query)

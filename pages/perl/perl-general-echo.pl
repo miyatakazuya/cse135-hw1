@@ -5,8 +5,8 @@ print "Content-type: text/html \n\n";
 # print HTML file top
 print <<END;
 <!DOCTYPE html>
-<html><head><title>General Request Echo</title>
-</head><body><h1 align="center">General Request Echo</h1>
+<html><head><title>Perl General Request Echo</title>
+</head><body><h1 align="center">Perl General Request Echo</h1>
 <hr>
 END
 

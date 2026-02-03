@@ -28,7 +28,10 @@ string urlDecode(string str) {
 int main() {
     cout << "Cache-Control: no-cache\r\n";
     cout << "Content-type: text/html\r\n\r\n";
-    cout << "<!DOCTYPE html><html><head><title>GET Request Echo</title></head><body><h1 align=\"center\">Get Request Echo</h1><hr>" << endl;
+    cout << "<!DOCTYPE html>" << endl;
+    cout << "<html><head><title>C++ GET Request Echo</title>" << endl;
+    cout << "</head><body><h1 align=\"center\">C++ Get Request Echo</h1>" << endl;
+    cout << "<hr>" << endl;
     
     char* query_str = getenv("QUERY_STRING");
     string query = query_str ? query_str : "";

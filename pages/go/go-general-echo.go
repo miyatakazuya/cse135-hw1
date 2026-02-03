@@ -10,7 +10,7 @@ import (
 func main() {
     fmt.Println("Cache-Control: no-cache")
     fmt.Println("Content-type: text/html\n")
-    fmt.Println("<!DOCTYPE html><html><head><title>General Request Echo</title></head><body><h1 align=\"center\">General Request Echo</h1><hr>")
+    fmt.Println("<!DOCTYPE html><html><head><title>Go General Request Echo</title></head><body><h1 align=\"center\">Go General Request Echo</h1><hr>")
     
     fmt.Printf("<p><b>HTTP Protocol:</b> %s</p>\n", os.Getenv("SERVER_PROTOCOL"))
     fmt.Printf("<p><b>HTTP Method:</b> %s</p>\n", os.Getenv("REQUEST_METHOD"))

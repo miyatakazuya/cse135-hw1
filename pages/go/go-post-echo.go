@@ -11,7 +11,7 @@ import (
 func main() {
     fmt.Println("Cache-Control: no-cache")
     fmt.Println("Content-type: text/html\n")
-    fmt.Println("<!DOCTYPE html><html><head><title>POST Request Echo</title></head><body><h1 align=\"center\">POST Request Echo</h1><hr>")
+    fmt.Println("<!DOCTYPE html><html><head><title>Go POST Request Echo</title></head><body><h1 align=\"center\">Go POST Request Echo</h1><hr>")
     
     body, _ := ioutil.ReadAll(os.Stdin)
     bodyStr := string(body)

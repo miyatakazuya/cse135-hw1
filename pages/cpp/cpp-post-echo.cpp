@@ -28,7 +28,10 @@ string urlDecode(string str) {
 int main() {
     cout << "Cache-Control: no-cache\r\n";
     cout << "Content-type: text/html\r\n\r\n";
-    cout << "<!DOCTYPE html><html><head><title>POST Request Echo</title></head><body><h1 align=\"center\">POST Request Echo</h1><hr>" << endl;
+    cout << "<!DOCTYPE html>" << endl;
+    cout << "<html><head><title>C++ POST Request Echo</title>" << endl;
+    cout << "</head><body><h1 align=\"center\">C++ POST Request Echo</h1>" << endl;
+    cout << "<hr>" << endl;
     
     string body;
     char c;

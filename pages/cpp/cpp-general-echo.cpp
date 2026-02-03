@@ -9,7 +9,10 @@ using namespace std;
 int main() {
     cout << "Cache-Control: no-cache\r\n";
     cout << "Content-type: text/html\r\n\r\n";
-    cout << "<!DOCTYPE html><html><head><title>General Request Echo</title></head><body><h1 align=\"center\">General Request Echo</h1><hr>" << endl;
+    cout << "<!DOCTYPE html>" << endl;
+    cout << "<html><head><title>C++ General Request Echo</title>" << endl;
+    cout << "</head><body><h1 align=\"center\">C++ General Request Echo</h1>" << endl;
+    cout << "<hr>" << endl;
     
     cout << "<p><b>HTTP Protocol:</b> " << (getenv("SERVER_PROTOCOL") ? getenv("SERVER_PROTOCOL") : "") << "</p>" << endl;
     cout << "<p><b>HTTP Method:</b> " << (getenv("REQUEST_METHOD") ? getenv("REQUEST_METHOD") : "") << "</p>" << endl;
