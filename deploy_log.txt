@@ -3,3 +3,126 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+[2026-01-24 01:11:06] PULL RESULT: Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[2026-01-24 01:15:05] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   35ff868..9300460  main       -> origin/main
+Updating 35ff868..9300460
+Fast-forward
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[2026-01-24 01:17:13] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   9300460..ccbb540  main       -> origin/main
+Updating 9300460..ccbb540
+Fast-forward
+ index.html    | 82 ++++++++++++++++-------------------------------------------
+ personal.html | 65 ++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 87 insertions(+), 60 deletions(-)
+ create mode 100644 personal.html
+[2026-01-24 01:23:01] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   ccbb540..55d950b  main       -> origin/main
+Updating ccbb540..55d950b
+Fast-forward
+ .gitignore        |  13 +++
+ index.html        |   2 +-
+ new404.html       |   2 +
+ pages/report.html |   1 +
+ robots.txt        | 260 +-----------------------------------------------------
+ 5 files changed, 18 insertions(+), 260 deletions(-)
+ create mode 100644 pages/report.html
+[2026-01-24 01:25:29] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   55d950b..8db883d  main       -> origin/main
+Updating 55d950b..8db883d
+Fast-forward
+ index.html | 4 ++++
+ 1 file changed, 4 insertions(+)
+[2026-01-24 01:44:34] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   8db883d..c9f16c3  main       -> origin/main
+Updating 8db883d..c9f16c3
+Fast-forward
+ css/pages.css          |   9 ++-
+ index.html             |   4 +-
+ new404.html            |   4 +-
+ pages/aboutme.html     |  12 +--
+ pages/contact.html     | 174 +++++++++++++++++++++--------------------
+ pages/form-no-js.html  | 190 +++++++++++++++++++++++----------------------
+ pages/project-new.html |  98 +++++++++++------------
+ pages/projects.html    | 207 ++++++++++++++++++++++++-------------------------
+ personal.html          |   8 +-
+ 9 files changed, 357 insertions(+), 349 deletions(-)
+[2026-01-24 02:30:08] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   c9f16c3..f371d6f  main       -> origin/main
+Updating c9f16c3..f371d6f
+Fast-forward
+ index.html                | 12 +++------
+ members/kazuyamiyata.html | 68 +++++++++++++++++++++++++++++++++++++++++++++++
+ personal.html             | 65 --------------------------------------------
+ 3 files changed, 72 insertions(+), 73 deletions(-)
+ create mode 100644 members/kazuyamiyata.html
+ delete mode 100644 personal.html
+[2026-01-24 02:49:44] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   f371d6f..2c8d3cd  main       -> origin/main
+Updating f371d6f..2c8d3cd
+Fast-forward
+ .htacess | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .htacess
+[2026-01-24 02:50:11] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   2c8d3cd..4c07572  main       -> origin/main
+Updating 2c8d3cd..4c07572
+Fast-forward
+ .htacess => .htaccess | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename .htacess => .htaccess (100%)
+[2026-01-24 02:55:09] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   4c07572..b3569e1  main       -> origin/main
+Updating 4c07572..b3569e1
+Fast-forward
+ .htaccess | 5 +++++
+ 1 file changed, 5 insertions(+)
+[2026-02-02 04:21:45] PULL RESULT: fatal: detected dubious ownership in repository at '/var/www/kazuyamiyata.site/public_html'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/kazuyamiyata.site/public_html
+[2026-02-02 04:28:31] PULL RESULT: fatal: detected dubious ownership in repository at '/var/www/kazuyamiyata.site/public_html'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/kazuyamiyata.site/public_html
+[2026-02-02 04:34:46] PULL RESULT: From github.com:miyatakazuya/cse135-hw1
+ * branch            main       -> FETCH_HEAD
+   b3569e1..dcb63ba  main       -> origin/main
+Updating b3569e1..dcb63ba
+Fast-forward
+ perl/perl-destroy-session.pl  | 26 +++++++++++++++++++++++++
+ perl/perl-env-pm.pl           | 21 ++++++++++++++++++++
+ perl/perl-env.pl              | 19 ++++++++++++++++++
+ perl/perl-general-echo.pl     | 27 ++++++++++++++++++++++++++
+ perl/perl-get-echo.pl         | 38 ++++++++++++++++++++++++++++++++++++
+ perl/perl-hello-html-world.pl | 25 ++++++++++++++++++++++++
+ perl/perl-hello-json-world.pl | 14 ++++++++++++++
+ perl/perl-post-echo.pl        | 45 +++++++++++++++++++++++++++++++++++++++++++
+ perl/perl-sessions-1.pl       | 40 ++++++++++++++++++++++++++++++++++++++
+ perl/perl-sessions-2.pl       | 45 +++++++++++++++++++++++++++++++++++++++++++
+ 10 files changed, 300 insertions(+)
+ create mode 100644 perl/perl-destroy-session.pl
+ create mode 100644 perl/perl-env-pm.pl
+ create mode 100644 perl/perl-env.pl
+ create mode 100644 perl/perl-general-echo.pl
+ create mode 100644 perl/perl-get-echo.pl
+ create mode 100644 perl/perl-hello-html-world.pl
+ create mode 100644 perl/perl-hello-json-world.pl
+ create mode 100644 perl/perl-post-echo.pl
+ create mode 100644 perl/perl-sessions-1.pl
+ create mode 100644 perl/perl-sessions-2.pl
