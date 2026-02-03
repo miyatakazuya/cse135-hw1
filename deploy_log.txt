@@ -126,3 +126,7 @@ Fast-forward
  create mode 100644 perl/perl-post-echo.pl
  create mode 100644 perl/perl-sessions-1.pl
  create mode 100644 perl/perl-sessions-2.pl
+[2026-02-03 02:18:08] PULL RESULT: fatal: detected dubious ownership in repository at '/var/www/kazuyamiyata.site/public_html'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/kazuyamiyata.site/public_html
