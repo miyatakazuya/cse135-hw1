@@ -1,64 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/aboutme.css">
-  </head>
 
-  <body>
-    <header id="header">
-      <h1>About Me</h1>
-      <a href="../index.html" class="main_button">Home</a>
-      <a href="aboutme.html" class="main_button active">About Me</a>
-      <a href="project-new.html" class="main_button">Project</a>
-      <a href="contact.html" class="main_button">Contact</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/aboutme.css">
 
-      <label class="switch">
-        <input type="checkbox" id="toggleTheme" onclick="toggleTheme()">
-        <span class="slider round"></span>
-      </label>
-    </header>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TXE39YWDW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <hr>
+    gtag('config', 'G-3TXE39YWDW');
+  </script>
 
-    <content-body>
-      
-      <section class="profile">
-        <h2>General</h2>
-        <picture>
-          <source srcset="../images/kaz_portrait_updated.jpg" media="(min-width: 800px)" type="image/jpg">
-          <img
-            src="../images/headshot_small.png"
-            width="1000"
-            alt="Kazuya Miyata Portrait"
-          >
-        </picture>
-  
-        <p>
-          Hi, I'm <b>Kazuya Miyata</b> I'm a second-year undergraduate sttudent studying Computer Science at <abbr>UCSD</abbr>(University of California, San Diego).<br><br>
-          I am interested in autonomous robotics and systems design.<br>
-          If you are interested, please check out my 
-          <a href="../media/Kazuya_Miyata_Resume_6.pdf">resume</a>!
-        </p>
-      </section>
-      
+  <script src="https://cdn.logr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+  <script>window.LogRocket && window.LogRocket.init('qfwov4/cse-135');</script>
 
-    </content-body>
-    
-    <hr> 
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="14d5260f-84a6-47b7-b5ef-761746fe1bc2"></script>
+</head>
 
-    <footer-nav></footer-nav>
+<body>
+  <header id="header">
+    <h1>About Me</h1>
+    <a href="../index.html" class="main_button">Home</a>
+    <a href="aboutme.html" class="main_button active">About Me</a>
+    <a href="project-new.html" class="main_button">Project</a>
+    <a href="contact.html" class="main_button">Contact</a>
 
-    <script src="../scripts/theme.js"></script>
-    <script src="../scripts/footer.js"></script>
+    <label class="switch">
+      <input type="checkbox" id="toggleTheme" onclick="toggleTheme()">
+      <span class="slider round"></span>
+    </label>
+  </header>
 
-    <script>
-      document.getElementsByClassName("slider")[0].style.display = "block";
-    </script>
+  <hr>
 
-  </body>
+  <content-body>
+
+    <section class="profile">
+      <h2>General</h2>
+      <picture>
+        <source srcset="../images/kaz_portrait_updated.jpg" media="(min-width: 800px)" type="image/jpg">
+        <img src="../images/headshot_small.png" width="1000" alt="Kazuya Miyata Portrait">
+      </picture>
+
+      <p>
+        Hi, I'm <b>Kazuya Miyata</b> I'm a second-year undergraduate sttudent studying Computer Science at
+        <abbr>UCSD</abbr>(University of California, San Diego).<br><br>
+        I am interested in autonomous robotics and systems design.<br>
+        If you are interested, please check out my
+        <a href="../media/Kazuya_Miyata_Resume_6.pdf">resume</a>!
+      </p>
+    </section>
+
+
+  </content-body>
+
+  <hr>
+
+  <footer-nav></footer-nav>
+
+  <script src="../scripts/theme.js"></script>
+  <script src="../scripts/footer.js"></script>
+
+  <script>
+    document.getElementsByClassName("slider")[0].style.display = "block";
+  </script>
+
+</body>
+
 </html>
